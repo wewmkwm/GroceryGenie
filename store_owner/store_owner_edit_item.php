@@ -81,6 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $message = "<div class='alert alert-danger'>??O Error updating item: " . $update_stmt->error . "</div>";
         }
     }
+}
 ?>
 
 <?php include("store_owner_header.php"); ?>

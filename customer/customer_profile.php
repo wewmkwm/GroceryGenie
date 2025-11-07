@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $uploadError = null;
         if (!empty($_FILES['profile_pic']['name'])) {
             $uploadResult = gg_secure_upload(
-                $_FILES['profile_pic'],
+                $_FILES['profile_pic'],/*  */
                 dirname(__DIR__) . '/uploads/customers/',
                 ['image/jpeg', 'image/png', 'image/webp'],
                 3 * 1024 * 1024

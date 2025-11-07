@@ -483,7 +483,12 @@
           return;
         }
         chips.innerHTML = '';
-        list.forEach(c => {
+        list
+          .filter(c => {
+            const name = (c.strCategory || '').toLowerCase();
+            return name !== 'beef' && name !== 'pork';
+          })
+          .forEach(c => {
           const el = document.createElement('span');
           el.className = 'chip';
           el.innerHTML = `<i class="fas fa-tag"></i> ${c.strCategory}`;
